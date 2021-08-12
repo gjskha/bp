@@ -26,7 +26,7 @@ class GeoJsonApi < Sinatra::Base
   
   # `GET` - Responds w/GeoJSON point(s) within a radius around a point
   #  params: GeoJSON Point and integer radius in feet/meters
-  get '/point/:point/radius/:radius' do
+  get '/points/:point/radius/:radius' do
     point = params['point']
     radius = params['radius']
     json :placeholder => 'value'
@@ -34,7 +34,7 @@ class GeoJsonApi < Sinatra::Base
   
   # `GET` - Responds w/GeoJSON point(s) within a geographical polygon
   # params: GeoJSON Polygon with no holes
-  get '/polygon/:polygon' do
+  get '/polygons/:polygon' do
     polygon = params['polygon']
     json :placeholder => 'value'
   end 
